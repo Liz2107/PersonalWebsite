@@ -295,6 +295,29 @@ footer a:hover {
       object-fit: cover;
       position: relative;
     }
+    /* Overriding mobile issue */
+    .postcard__img {
+      width: 100%;
+      height: 200px;     
+      object-fit: cover; 
+    }
+
+    @media screen and (min-width: 769px) {
+      .postcard__img {
+        width: 300px;
+        height: auto;
+        max-height: none;
+      }
+
+      .postcard__text {
+        padding: 1.5rem;
+      }
+
+      .postcard__text p {
+        font-size: 0.9rem;
+        line-height: 1.4; 
+    }
+}
   
     .postcard__img_link {
       display: contents;
