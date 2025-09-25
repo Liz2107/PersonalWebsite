@@ -301,23 +301,6 @@ footer a:hover {
       height: 200px;     
       object-fit: cover; 
     }
-
-    @media screen and (min-width: 769px) {
-      .postcard__img {
-        width: 300px;
-        height: auto;
-        max-height: none;
-      }
-
-      .postcard__text {
-        padding: 1.5rem;
-      }
-
-      .postcard__text p {
-        font-size: 0.9rem;
-        line-height: 1.4; 
-    }
-}
   
     .postcard__img_link {
       display: contents;
@@ -342,10 +325,22 @@ footer a:hover {
     .postcard__preview-txt {
       overflow: hidden;
       text-overflow: ellipsis;
-      text-align: justify;
+      text-align: left;
       height: 100%;
     }
   
+    @media screen and (min-width: 769px) {
+      .postcard__img {
+        width: 300px;
+        height: auto;
+        max-height: none;
+      }
+
+      /* .postcard__preview-txt {
+        padding: 1.5rem;
+        font-size: 0.5rem;
+      } */
+}
     .postcard__tagbox {
       display: flex;
       flex-flow: row wrap;
@@ -615,4 +610,16 @@ footer a:hover {
   }
 .postcard.light {
   background-color: #e6e6e6; 
+}
+@media screen and (max-width: 768px) {
+  html {
+    --bs-body-font-size: 0.9rem !important;
+  }
+  .linkedin,
+  .linkedin a {
+    font-size: 0.9rem !important;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal; 
+  }
 }
